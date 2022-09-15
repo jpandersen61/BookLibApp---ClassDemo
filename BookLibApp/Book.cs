@@ -23,8 +23,15 @@ namespace BookLibApp
             get { return _title; }
             set
             {
-                if (value.Length <= MinTitleLength) throw new ArgumentOutOfRangeException();
-                _title = value;
+                if (value.Length >= MinTitleLength) 
+                {
+                    _title = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                
             }
         }
 
@@ -33,8 +40,14 @@ namespace BookLibApp
             get { return _year; }
             set
             {
-                if (value >= MinYear && value <= MaxYear) throw new ArgumentOutOfRangeException();
-                _year = value;
+                if (value >= MinYear && value <= MaxYear)
+                {
+                    _year = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
         }
 
