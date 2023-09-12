@@ -23,14 +23,14 @@ namespace BookLibApp
             get { return _title; }
             set
             {
-                if (value.Length >= MinTitleLength) 
-                {
+                //if (value.Length >= MinTitleLength) 
+                //{
                     _title = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
+                //}
+                //else
+                //{
+                //    throw new ArgumentOutOfRangeException();
+                //}
                 
             }
         }
